@@ -14,3 +14,45 @@
     flex: 33.33%;
     padding: 5px;
   }
+
+  hr
+  {
+    color: rgb(236, 243, 186) !important;
+  }
+
+  h1, h2
+  {
+    color: rgb(114, 199, 210) !important;
+    text-align: center;
+    font-family:monospace;
+  }
+
+  a
+  {
+    color: rgb(56, 107, 195);
+  }
+
+  a:hover
+  {
+    color: rgb(131, 159, 228);
+  }
+
+  html
+  {
+    background-image: url(https://wallpaperaccess.com/full/543756.jpg);
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:100% 100%;
+    min-height:100%;
+    min-width:100%;
+    background-size:cover;
+    height: 100%;
+
+    color: rgb(203, 219, 227) !important;
+    font-family: Verdana;
+  }
+
+
