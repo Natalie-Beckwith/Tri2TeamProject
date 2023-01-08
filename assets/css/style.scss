@@ -1,6 +1,7 @@
 ---
 ---
 
+
 //@import "{{ site.theme }}";
 
 /* "row style" is flexible size and aligns pictures in center */
@@ -27,14 +28,49 @@
     font-family:monospace;
   }
 
-  a
+  a, .dropdown-button
   {
     color: rgb(56, 107, 195);
   }
 
-  a:hover
+  a:hover, .dropdown-button:hover
   {
     color: rgb(131, 159, 228);
+  }
+
+  .dropdown
+  {
+    display: inline-block;
+    position: relative;
+    margin-left: 1%;
+  }
+
+  .dropdown-button
+  {
+    background-color: rgba(131, 159, 228, 0);
+    border-color: rgba(56, 107, 195, 0);
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  .dropdown-button:hover
+  {
+    background-color: rgba(56, 107, 195, 0);
+    color: rgb(131, 159, 228);
+  }
+
+  .dropdown-options
+  {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    font-size: 14px;
+  }
+  
+  .dropdown:hover .dropdown-options
+  {
+    display: block;
+    background-color: rgb(203, 219, 227);
   }
 
   html
