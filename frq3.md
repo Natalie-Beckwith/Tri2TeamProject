@@ -31,7 +31,17 @@
     fetch(url, {method: 'POST',});
 
     // GET
-    fetch("https://blognorte.tk/api/calculator", {method: 'GET'})
+    fetch("https://blognorte.tk/api/calculator", {
+      method: 'GET',
+      mode: 'no-cors',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
+        'Access-Control-Allow-Headers': 'application/json',
+        'Access-Control-Allow-Credentials': true
+      }})
       .then(response => response.json())
       .then(data => {
         const table = document.getElementById('table');
