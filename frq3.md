@@ -28,12 +28,12 @@
 
     // POST
     fetch('https:blognorte.tk/api/calculator/create?exp='+input, {
-        mode: "no-cors",
+        mode: 'no-cors',
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': *
+            'Access-Control-Allow-Origin': '*'
         }
     })
 
@@ -41,8 +41,12 @@
     fetch("https://blognorte.tk/api/calculator",
       {method: 'GET',
       headers: {
-        mode: "no-cors",
-        'Access-Control-Allow-Origin': *
+        mode: 'no-cors',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
       }
       .then(response => response.json())
       .then(data => {
