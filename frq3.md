@@ -39,7 +39,7 @@
 
     // GET
     fetch("https://blognorte.tk/api/calculator",
-      method: 'GET',
+      {method: 'GET',
       headers: {
         mode: "no-cors",
         'Access-Control-Allow-Origin': *
