@@ -27,7 +27,7 @@
     let input = document.getElementById('input').value;
 
     // POST
-    fetch('https:blognorte.tk/api/calculator/create?exp='+input {
+    fetch('https:blognorte.tk/api/calculator/create?exp='+input, {
         mode: "no-cors",
         method: 'POST',
         headers: {
@@ -38,7 +38,7 @@
     })
 
     // GET
-    fetch(https://blognorte.tk/api/calculator")
+    fetch("https://blognorte.tk/api/calculator",
       method: 'GET',
       headers: {
         mode: "no-cors",
