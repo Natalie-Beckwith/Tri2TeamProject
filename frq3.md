@@ -27,16 +27,21 @@
     let input = document.getElementById('input').value;
 
     // POST
-    fetch('https:blognorte.tk/api/calculator/create?exp='+input, {
+    fetch('https:blognorte.tk/api/calculator/create?exp='+input, {mode: "no-cors"}) {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': *
         }
     })
 
     // GET
-    fetch(`https://blognorte.tk/api/calculator`)
+    fetch(`https://blognorte.tk/api/calculator`, {mode: "no-cors"})
+      method: 'GET',
+      headers: {
+        'Access-Control-Allow-Origin': *
+      }
       .then(response => response.json())
       .then(data => {
         const table = document.getElementById('table');
