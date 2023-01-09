@@ -25,7 +25,18 @@
   document.getElementById('form').addEventListener('submit', (event) => {
     event.preventDefault();
     let input = document.getElementById('input').value;
-    fetch(`${"ToBeFilledIn"}/${cleanInput}`)
+
+    // POST
+    fetch('18.144.58.68:8085/api/calculator/create?exp='+input, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+
+    // GET
+    fetch(`18.144.58.68:8085/api/calculator`)
       .then(response => response.json())
       .then(data => {
         const table = document.getElementById('table');
