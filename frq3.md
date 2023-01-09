@@ -28,31 +28,10 @@
 
     // POST
     const url = 'https:blognorte.tk/api/calculator/create?exp='+input;
-    fetch(url, {
-        mode: 'no-cors',
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
-            'Access-Control-Allow-Headers': 'application/json',
-            'Access-Control-Allow-Credentials': true
-        }
-    })
+    fetch(url, {method: 'POST',});
 
     // GET
-    fetch("https://blognorte.tk/api/calculator", {
-      method: 'GET',
-      mode: 'no-cors',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
-        'Access-Control-Allow-Headers': 'application/json',
-        'Access-Control-Allow-Credentials': true
-      }})
+    fetch("https://blognorte.tk/api/calculator", {method: 'GET'})
       .then(response => response.json())
       .then(data => {
         const table = document.getElementById('table');
