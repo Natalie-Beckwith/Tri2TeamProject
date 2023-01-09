@@ -33,9 +33,9 @@
     // GET
     fetch("https://blognorte.tk/api/calculator", {
       method: 'GET',
-      mode: 'no-cors',
       headers: {
-        'Content-Type': 'text/plain;charset=UTF-8'
+         'User-Agent': 'curl/7.68.0',
+         'Accept': '*/*'
       }})
       .then(response => response.json())
       .then(data => {
