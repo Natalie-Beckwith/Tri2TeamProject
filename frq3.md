@@ -27,7 +27,7 @@
     let input = document.getElementById('input').value;
 
     // POST
-    fetch('http://18.144.58.68:8085/api/calculator/create?exp='+input, {
+    fetch('https:blognorte.tk/api/calculator/create?exp='+input, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -36,7 +36,7 @@
     })
 
     // GET
-    fetch(`http://18.144.58.68:8085/api/calculator`)
+    fetch(`https://blognorte.tk/api/calculator`)
       .then(response => response.json())
       .then(data => {
         const table = document.getElementById('table');
