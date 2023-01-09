@@ -35,12 +35,7 @@
       method: 'GET',
       mode: 'no-cors',
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE',
-        'Access-Control-Allow-Headers': 'application/json',
-        'Access-Control-Allow-Credentials': true
+        'Content-Type': 'text/plain;charset=UTF-8'
       }})
       .then(response => response.json())
       .then(data => {
