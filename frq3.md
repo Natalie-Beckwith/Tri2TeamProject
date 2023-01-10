@@ -26,7 +26,8 @@
     .then((response) => {
       console.log("test");
       console.log(response);
-      document.getElementById("result").value = response;
+      console.log(response.text());
+      document.getElementById("result").value = response.text();
       })
   });
 </script>
