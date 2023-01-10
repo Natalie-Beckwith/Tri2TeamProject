@@ -25,7 +25,7 @@
     fetch(url, {method: 'POST', mode: 'no-cors'})                    
     .then((response) => {
     // check for response errors
-      if (response.status == 200) {
+      if (response.status == 201) {
         console.log("test");
         return response.json().then((data) => {
         document.getElementById("result").value = data.result;
