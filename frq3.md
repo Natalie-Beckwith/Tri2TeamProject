@@ -31,17 +31,26 @@
   fetch(url, {method: 'POST', mode: 'no-cors'})
   .then(response => response.json())
     .then(data => {
+      console.log(data);
+      console.log("make table");
       const table = document.getElementById('table');
       const row = table.insertRow(-1);
       const inputCell = row.insertCell(0);
       const tokensCell = row.insertCell(1);
       const postfixCell = row.insertCell(2);
       const resultCell = row.insertCell(3);
+      console.log("tables done");
       // Print data to table
+      console.log("begin output data");
+      console.log("expression");
       inputCell.innerHTML = data.expression;
+      console.log("tokens");
       tokensCell.innerHTML = data.tokens;
+      console.log("postfix");
       rpnCell.innerHTML = data.reverse_polish;
+      console.log("output data");
       resultCell.innerHTML = data.result;
+      console.log("data outputted");
     });
   }
   );
