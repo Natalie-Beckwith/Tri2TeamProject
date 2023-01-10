@@ -28,12 +28,12 @@
 
   // POST
   const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
-  let fetchRes = fetch(url, {method: 'POST', headers:{"Accept":"application/json"}, mode: 'no-cors'});
+  let fetchRes = await fetch(url, {method: 'POST', headers:{"Accept":"application/json"}, mode: 'no-cors'});
   console.log(fetchRes);
-  fetchRes.then(response => { console.log(response) });
 
-  fetchRes.then(response => response.json())
-    .then(data => {
+//  fetchRes.then(response => response.json())
+//    .then(data =>
+let data = await fetchRes.json();    
       console.log(data);
       console.log("make table");
       const table = document.getElementById('table');
@@ -54,7 +54,6 @@
       console.log("output data");
       resultCell.innerHTML = data.result;
       console.log("data outputted");
-    });
   }
   );
 </script>
