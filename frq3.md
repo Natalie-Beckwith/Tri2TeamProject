@@ -42,6 +42,7 @@
         tokensCell.innerHTML = data.tokens;
         rpnCell.innerHTML = data.reverse_polish;
         resultCell.innerHTML = data.result;
+      });
 /*
     // GET
     fetch("https://blognorte.tk/api/calculator", {
