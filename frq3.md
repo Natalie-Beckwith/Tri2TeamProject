@@ -25,7 +25,7 @@
     fetch(url, {method: 'POST', mode: 'no-cors'})                    
     .then((response) => {
       console.log("test");
-      return response.json().then((data) => {
+      return response.then((data) => {
       document.getElementById("result").value = data.result;
       console.log(data.result);
       })
