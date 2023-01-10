@@ -11,7 +11,14 @@
 
 ## Results
 <!--- Table of results -->
-<h2 id="result"></h2>
+<table id="table">
+  <tr>
+    <th>Input</th>
+    <th>Tokens</th> 
+    <th>Postfix</th>
+    <th>Calculation</th>
+  </tr>
+</table>
 
 <!--- Access API -->
 <script>
@@ -19,11 +26,23 @@
     event.preventDefault();
     let input = document.getElementById('input').value;
 
-    // POST
-    const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
-
-    fetch(url, {method: 'POST', mode: 'no-cors'})                    
-    .then((response) => response.text())
-    .then((text) => {result.innerHTML = text});
-  });
+  // POST
+  const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
+  fetch(url, {method: 'POST', mode: 'no-cors'})
+  .then(response => response.json())
+    .then(data => {
+      const table = document.getElementById('table');
+      const row = table.insertRow(-1);
+      const inputCell = row.insertCell(0);
+      const tokensCell = row.insertCell(1);
+      const postfixCell = row.insertCell(2);
+      const resultCell = row.insertCell(3);
+      // Print data to table
+      inputCell.innerHTML = data.expression;
+      tokensCell.innerHTML = data.tokens;
+      rpnCell.innerHTML = data.reverse_polish;
+      resultCell.innerHTML = data.result;
+    });
+  }
+  );
 </script>
