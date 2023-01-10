@@ -29,10 +29,7 @@
   // POST
   const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
   fetch(url, {method: 'POST', headers:{"Accept":"application/json"}})
-  .then(response => {
-    console.log(response);
-    response.text();}
-)
+  .then(response => response.json())
   .then(data => {
       console.log(data);
       console.log("make table");
