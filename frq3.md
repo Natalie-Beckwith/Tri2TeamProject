@@ -25,10 +25,8 @@
     fetch(url, {method: 'POST', mode: 'no-cors'})                    
     .then((response) => {
       console.log("test");
-      return response.then((data) => {
-      document.getElementById("result").value = data.result;
-      console.log(data.result);
+      console.log(response);
+      document.getElementById("result").value = response;
       })
-    });
   });
 </script>
