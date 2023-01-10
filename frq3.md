@@ -11,14 +11,7 @@
 
 ## Results
 <!--- Table of results -->
-<table id="table">
-  <tr>
-    <th>Input</th>
-    <th>Tokens</th> 
-    <th>Postfix</th>
-    <th>Calculation</th>
-  </tr>
-</table>
+<h2 id="result"></h2>
 
 <!--- Access API -->
 <script>
@@ -28,43 +21,7 @@
 
     // POST
     const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
-    fetch(url, {method: 'POST', mode: 'no-cors'})
-    .then(response => response.json())
-      .then(data => {
-        const table = document.getElementById('table');
-        const row = table.insertRow(-1);
-        const inputCell = row.insertCell(0);
-        const tokensCell = row.insertCell(1);
-        const postfixCell = row.insertCell(2);
-        const resultCell = row.insertCell(3);
-        // Print data to table
-        inputCell.innerHTML = data.expression;
-        tokensCell.innerHTML = data.tokens;
-        rpnCell.innerHTML = data.reverse_polish;
-        resultCell.innerHTML = data.result;
-      });
-/*
-    // GET
-    fetch("https://blognorte.tk/api/calculator", {
-      method: 'GET',
-      mode: 'no-cors',
-      headers: {
-         'User-Agent': 'curl/7.68.0',
-      }})
-      .then(response => response.json())
-      .then(data => {
-        const table = document.getElementById('table');
-        const row = table.insertRow(-1);
-        const inputCell = row.insertCell(0);
-        const tokensCell = row.insertCell(1);
-        const postfixCell = row.insertCell(2);
-        const resultCell = row.insertCell(3);
-        // Print data to table
-        inputCell.innerHTML = data.expression;
-        tokensCell.innerHTML = data.tokens;
-        rpnCell.innerHTML = data.reverse_polish;
-        resultCell.innerHTML = data.result;
-      });
-*/
+
+    result.innerHTML = fetch(url, {method: 'POST', mode: 'no-cors'});
   });
 </script>
