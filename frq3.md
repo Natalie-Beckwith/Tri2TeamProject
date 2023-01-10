@@ -23,11 +23,7 @@
     const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
 
     fetch(url, {method: 'POST', mode: 'no-cors'})                    
-    .then((response) => {
-      console.log("test");
-      console.log(response);
-      console.log(response.text());
-      document.getElementById("result").value = response.text();
-      })
+    .then((response) => response.text())
+    .then((text) => {result.innerHTML = text});
   });
 </script>
