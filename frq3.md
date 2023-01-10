@@ -27,7 +27,9 @@
     // check for response errors
       if (response.status == 200) {
         return response.json().then((data) => {
-        document.getElementById("result").value = data.result;
-        });
+          document.getElementById("result").value = data.result;
+        }
+      }
+    });
   });
 </script>
