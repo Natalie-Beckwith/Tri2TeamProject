@@ -5,12 +5,25 @@
             <div class="dropdown">
                 <button class="dropdown-button">FRQs</button>
                 <div class="dropdown-options">
-                    <a href="/frq1">FRQ #1</a>
-                    <a href="/frq2">FRQ #2</a>
-                    <a href="/frq3">FRQ #3</a>
-                    <a href="/frq4">FRQ #4</a>
+                    <a onclick="sendNav('frq1')" href="/frq1">FRQ #1</a>
+                    <a onclick="sendNav('frq2')" href="/frq2">FRQ #2</a>
+                    <a onclick="sendNav('frq3')" href="/frq3">FRQ #3</a>
+                    <a onclick="sendNav('frq4')" href="/frq4">FRQ #4</a>
                 </div>
             </div>
         </td>
     </tr>
 </table>
+
+<script>
+
+function sendNav(frq){
+    if(window.location.endsWith('Tri2TeamProject/')){
+        window.location = window.location + frq;
+    }
+    else{
+        window.location = window.location.origin + '/' + frq;
+    }
+}
+
+</script>
