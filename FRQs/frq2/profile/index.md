@@ -76,7 +76,6 @@ async function showProfile(data, profile){
 
 async function showStats(stats, profileStats){
   let statslist = document.getElementById('stats-list');
-  //for each value in the json object stats, console log a
 
   Object.keys(stats).forEach(async key => {
     statslist.innerHTML += `<li>${key}: ${stats[key]["steps"]}</li>`;
@@ -102,7 +101,6 @@ async function verifyEmail(email, password){
     const response = await fetch(url, {method: 'GET', headers:{"Accept":"application/json"}})
     const data = await response.json();
     const person = data.find(person => person.email === email);
-    console.log(person.stats);
     
     if(person){
       if(person.password === password){
