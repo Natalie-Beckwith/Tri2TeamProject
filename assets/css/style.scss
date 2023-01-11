@@ -1,29 +1,93 @@
 ---
 ---
 
-@import "{{ site.theme }}";
 
-$red:rgba(236, 31, 31, 0.915);
-$white: rgb(254, 254, 254);
+@import "{{ site.theme }}";
 
 /* "row style" is flexible size and aligns pictures in center */
 .row {
-  align-items: center;
-  display: flex;
-}
+    align-items: center;
+    display: flex;
+    background: $orangeRed;
+  }
   
-/* "column style" is one-third of the width with padding */
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
+  /* "column style" is one-third of the width with padding */
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+    background: $orangeRed;
+  }
 
-body {
-  text-align: center;
-  color: $white;
-}
+  hr
+  {
+    color: rgb(236, 243, 186) !important;
+  }
 
-h1 {
-  text-align: center;
-  color: $red;
-}
+  h1, h2
+  {
+    color: rgb(114, 199, 210) !important;
+    text-align: center;
+    font-family:monospace;
+  }
+
+  a, .dropdown-button
+  {
+    color: rgb(56, 107, 195);
+  }
+
+  a:hover, .dropdown-button:hover
+  {
+    color: rgb(131, 159, 228);
+  }
+
+  .dropdown
+  {
+    display: inline-block;
+    position: relative;
+  }
+
+  .dropdown-button
+  {
+    background-color: rgba(131, 159, 228, 0);
+    border-color: rgba(56, 107, 195, 0);
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  .dropdown-button:hover
+  {
+    background-color: rgba(56, 107, 195, 0);
+    color: rgb(131, 159, 228);
+  }
+
+  .dropdown-options
+  {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    font-size: 14px;
+  }
+  
+  .dropdown:hover .dropdown-options
+  {
+    display: block;
+    background-color: rgb(203, 219, 227);
+  }
+
+  html
+  {
+    background-image: url(https://wallpaperaccess.com/full/543756.jpg);
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:100% 100%;
+    min-height:100%;
+    min-width:100%;
+    background-size:cover;
+    height: 100%;
+
+    color: rgb(203, 219, 227) !important;
+    font-family: Verdana;
+  }
