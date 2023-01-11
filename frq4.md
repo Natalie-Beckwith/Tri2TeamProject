@@ -42,8 +42,7 @@
     
 
 const url = 'https://blognorte.tk/api/LightBoard/makeBoard?rows='+rows+'&columns='+cols+'&diffcolor='+dc;
-//const url = 'http://localhost:8085/api/LightBoard/makeBoard';
-  //?rows='+rows+'&columms='+cols+'&diffcolor='+dc;
+  
   alert(url);
 
     fetch(url, {
@@ -53,7 +52,7 @@ const url = 'https://blognorte.tk/api/LightBoard/makeBoard?rows='+rows+'&columns
         .then(response => response.json())
         .then(json => console.log(json));
         
-   //     getLightBoard();
+        getLightBoard();
         
   }
 
@@ -87,6 +86,6 @@ function getLightBoard()
   })
 .catch(err => { throw err });
 
-}
+})
 
 </script>
