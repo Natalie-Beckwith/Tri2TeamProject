@@ -2,20 +2,18 @@
 ---
 
 
-@import "{{ site.theme }}";
+//@import "{{ site.theme }}";
 
 /* "row style" is flexible size and aligns pictures in center */
 .row {
     align-items: center;
     display: flex;
-    background: $orangeRed;
   }
   
   /* "column style" is one-third of the width with padding */
   .column {
     flex: 33.33%;
     padding: 5px;
-    background: $orangeRed;
   }
 
   hr
