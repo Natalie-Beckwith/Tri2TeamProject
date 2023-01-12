@@ -27,7 +27,7 @@
     let input = document.getElementById('input').value;
 
   // POST
-  const url = 'https://blognorte.tk/api/calculator/create?exp='+input;
+  const url = 'https://blognorte.tk/api/calculator/create?exp='+encodeURIComponent(input);
   fetch(url, {method: 'POST', headers:{"Accept":"application/json"}})
   .then(response => response.json())
   .then(data => {
