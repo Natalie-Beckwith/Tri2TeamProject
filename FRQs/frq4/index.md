@@ -79,4 +79,5 @@ function getLightBoard()
 
   })
 .catch(err => { throw err });
+}
 </script>
