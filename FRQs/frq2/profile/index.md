@@ -18,6 +18,7 @@
   <h1 id='height'></h1>
   <h1 id='weight'></h1>
   <h1 id="freetime"></h1>
+  <button onclick="editProfile()">Edit your profile</button>
 </div>
 <div id="profile-stats">
   <h1 id='stats'>Stats</h1>
@@ -53,6 +54,11 @@ body{
     await verifyEmail(email, password);
 
   })
+
+  function editProfileBut(){
+    
+  }
+
 
 async function showProfile(data, profile){
   let name = document.getElementById('name');
