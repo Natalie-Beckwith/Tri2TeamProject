@@ -102,6 +102,21 @@ function minutesToHourMinutes(min){
   return hours + " hours " + minutes + " minutes";
 }
 
+async function checkBrowserParams(){
+    // Get the query string from the URL
+  const queryString = window.location.search;
+
+  // Create a URLSearchParams object from the query string
+  const searchParams = new URLSearchParams(queryString);
+  const email = searchParams.get("email")
+  const password = searchParams.get("password")
+  email.decode
+  if(email && password){
+    await verifyEmail(email, password);
+  }
+}
+
+
 async function verifyEmail(email, password){
     const url = `https://blognorte.tk/api/person/`;
     const response = await fetch(url, {method: 'GET', headers:{"Accept":"application/json"}})
