@@ -6,5 +6,5 @@ gitorg: "https://github.com/Natalie-Beckwith/Tri2TeamProject"
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 gem "github-pages", group: :jekyll_plugins
-
+baseurl: /Tri2TeamProject
 # type 'bundle exec jekyll serve' into command line to run locally
