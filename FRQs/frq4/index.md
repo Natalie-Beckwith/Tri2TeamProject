@@ -31,10 +31,8 @@
 
 
 <script>
-  document.getElementById('form1').addEventListener('submit', (event) => {
+document.getElementById('form1').addEventListener('submit', (event) => {
     event.preventDefault();
-
-  alert("Hello");
 
     let rows = document.getElementById('row').value;
     let cols = document.getElementById('col').value;
@@ -43,18 +41,16 @@
 
 const url = 'https://blognorte.tk/api/LightBoard/makeBoard?rows='+rows+'&columns='+cols+'&diffcolor='+dc;
   
-  alert(url);
-
     fetch(url, {
       method: 'POST',
-      headers:{"Accept":"application/json"}
+      headers:{"Accept":"application/json", "Mode":"no-cors"/*, "Access-Control-Allow-Headers": "*"*/}
         })
         .then(response => response.json())
         .then(json => console.log(json));
         
         getLightBoard();
         
-  }
+  });
 
 function getLightBoard() 
 {
@@ -65,8 +61,6 @@ function getLightBoard()
     fetch(url1)
     .then(res => res.json())
   .then((out) => {
-
-    alert("Waiting for data..........");
 
      for (const rs of out.data)
   {
@@ -85,7 +79,4 @@ function getLightBoard()
 
   })
 .catch(err => { throw err });
-
-})
-
 </script>

@@ -24,7 +24,7 @@
     console.log(year2);
 
     const url = `https://blognorte.tk/api/calendar/numberOfLeapYears/${year1}/${year2}`;
-    fetch(url, {method: 'POST', headers:{"Accept":"application/json"}})
+    fetch(url, {method: 'GET', headers:{"Accept":"application/json"}})
       .then(response => response.json())
       .then(data =>
       {
