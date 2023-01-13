@@ -47,6 +47,7 @@ body{
   const form = document.getElementById('login');
   const profile = document.getElementById('profile-info');
   const profileStats = document.getElementById('profile-stats');
+  checkBrowserParams();
   form.addEventListener('submit', async event =>{
     event.preventDefault();
     const email = event.target.elements.email.value
@@ -105,12 +106,10 @@ function minutesToHourMinutes(min){
 async function checkBrowserParams(){
     // Get the query string from the URL
   const queryString = window.location.search;
-
   // Create a URLSearchParams object from the query string
   const searchParams = new URLSearchParams(queryString);
   const email = searchParams.get("email")
   const password = searchParams.get("password")
-  email.decode
   if(email && password){
     await verifyEmail(email, password);
   }

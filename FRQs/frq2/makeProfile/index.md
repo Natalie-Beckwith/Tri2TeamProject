@@ -70,9 +70,7 @@ async function submitForm(){
             console.log(data);
             if(data.includes("successfully")){
                 alert("Profile created successfully!");
-                let encodedEmail = encodeURIComponent(params.email);
-                let encodedPassword = encodeURIComponent(params.password);
-                window.location.href = location.origin + `/Tri2TeamProject/FRQs/frq2/profile?email=${encodedEmail}&password=${encodedPassword}`;
+                window.location.href = location.origin + `/Tri2TeamProject/FRQs/frq2/profile?email=${params.get('email')}&password=${params.get('password')}`;
             }
             else{
                 alert("Profile creation failed. Please try again.")
